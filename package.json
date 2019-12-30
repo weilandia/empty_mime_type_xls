@@ -1,6 +1,7 @@
 {
   "name": "empty_mime_type_xls",
   "private": true,
+  "_comment": "Use https://github.com/weilandia/activestorage.git to test patch",
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
