@@ -1,0 +1,14 @@
+<h3>Upload an XLS</h3>
+
+<%= form_with(model: Doc.new, local: true) do |form| %>
+  <%= form.file_field :attachment, direct_upload: true %><br>
+  <%= form.submit("Upload File") %>
+<% end %>
+
+<ul>
+  <% @docs.each do |doc|  %>
+    <li>
+      <%= link_to "Download #{doc.attachment.filename}", rails_blob_path(doc.attachment, disposition: "attachment") %>
+    </li>
+  <% end %>
+</ul>
